@@ -14,6 +14,8 @@ import dbConnection from './dbConfig/index.js'; // Ensure the correct path
 import errorMiddleware from './middleware/errorMiddleware.js'; // Ensure the correct path
 import router from './routes/index.js'; // Ensure the correct path
 
+
+//committed on 22 May
 // Load environment variables
 dotenv.config({ path: './config.env' });
 
