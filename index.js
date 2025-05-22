@@ -30,9 +30,15 @@ const port = process.env.PORT || 4000;
 dbConnection(); // Assuming this is the correct function for DB connection
 
 // Set up middleware
+// app.use(cors({
+//     origin: 'http://localhost:5173', // Adjust origin as needed
+// }));
 app.use(cors({
-    origin: 'http://localhost:5173', // Adjust origin as needed
+    origin: ['http://localhost:5173', 'https://wild-guard-three.vercel.app'], // allow both dev & prod
+    credentials: true,
 }));
+
+
 app.use(express.json({ limit: '10mb' }));
 app.use(bodyParser.json());
 app.use(helmet()); // Add security headers
